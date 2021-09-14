@@ -2,8 +2,6 @@
 using System;
 using Terraria;
 using Terraria.ModLoader;
-using Terraria.ModLoader.Config;
-using Terraria.ModLoader.IO;
 
 namespace ItemControl
 {
@@ -40,8 +38,8 @@ namespace ItemControl
                 return false;
             }
 
-            ItemDefinition Helper = new ItemDefinition(item.type);
-            if (Karl.BannedItems.Contains(Helper))
+            //ItemDefinition Helper = new ItemDefinition(item.type);
+            if (Karl.BannedItems.Find(x => x.Type == item.type) != null)
             {
                 if (Karl.sendMessages && stopbannedspam.AddSeconds(2) < DateTime.UtcNow)
                 {
@@ -74,8 +72,8 @@ namespace ItemControl
                     return false;
                 }
 
-                ItemDefinition Helper = new ItemDefinition(item.type);
-                if (Karl.BannedItems.Contains(Helper))
+                //ItemDefinition Helper = new ItemDefinition(item.type);
+                if (Karl.BannedItems.Find(x => x.Type == item.type) != null)
                 {
                     if (Karl.sendMessages && stopbannedspam.AddSeconds(2) < DateTime.UtcNow)
                     {
@@ -106,8 +104,8 @@ namespace ItemControl
                 return false;
             }
 
-            ItemDefinition Helper = new ItemDefinition(item.type);
-            if (Karl.BannedItems.Contains(Helper))
+            //ItemDefinition Helper = new ItemDefinition(item.type);
+            if (Karl.BannedItems.Find(x => x.Type == item.type) != null)
             {
                 if (Karl.sendMessages && stopbannedspam.AddSeconds(2) < DateTime.UtcNow)
                 {
@@ -137,8 +135,8 @@ namespace ItemControl
                 return false;
             }
 
-            ItemDefinition Helper = new ItemDefinition(item.type);
-            if (Karl.BannedItems.Contains(Helper))
+            //ItemDefinition Helper = new ItemDefinition(item.type);
+            if (Karl.BannedItems.Find(x => x.Type == item.type) != null)
             {
                 if (Karl.sendMessages && stopbannedspam.AddSeconds(2) < DateTime.UtcNow)
                 {

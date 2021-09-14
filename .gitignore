@@ -56,3 +56,4 @@ obj/ItemControl.csproj.nuget.dgspec.json
 obj/ItemControl.csproj.nuget.g.props
 obj/project.assets.json
 obj/project.nuget.cache
+.vs/ItemControl/DesignTimeBuild/.dtbcache.v2

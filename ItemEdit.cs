@@ -75,7 +75,7 @@ namespace ItemControl
 
             
 
-            ItemDefinition helper = new ItemDefinition();
+            //ItemDefinition helper = new ItemDefinition();
 
             if (Timer2 >= intervall)
             {
@@ -85,8 +85,8 @@ namespace ItemControl
                     {
                         foreach (var item in player.inventory)
                         {
-                            helper = new ItemDefinition(item.type);
-                            if (Karl.BannedItems.Contains(helper))
+                            //helper = new ItemDefinition(item.type);
+                            if (Karl.BannedItems.Find(x => x.Type == item.type) != null)
                             {
                                 if (item.IsAir)
                                 {
@@ -106,9 +106,9 @@ namespace ItemControl
                             }
                         }
 
-                        helper = new ItemDefinition(Main.mouseItem.type);
+                        //helper = new ItemDefinition(Main.mouseItem.type);
 
-                        if (Karl.BannedItems.Contains(helper))
+                        if (Karl.BannedItems.Find(x => x.Type == Main.mouseItem.type) != null)
                         {
                             if (Karl.sendMessages)
                             {
@@ -119,8 +119,8 @@ namespace ItemControl
 
                         foreach (var item in player.armor)
                         {
-                            helper = new ItemDefinition(item.type);
-                            if (Karl.BannedItems.Contains(helper))
+                            //helper = new ItemDefinition(item.type);
+                            if (Karl.BannedItems.Find(x => x.Type == item.type) != null)
                             {
                                 if (Karl.sendMessages)
                                 {
@@ -138,8 +138,8 @@ namespace ItemControl
                     {
                         if (Main.item[i].active)
                         {
-                            helper = new ItemDefinition(Main.item[i].type);
-                            if (Karl.BannedItems.Contains(helper))
+                            //helper = new ItemDefinition(Main.item[i].type);
+                            if (Karl.BannedItems.Find(x => x.Type == Main.item[i].type) != null)
                             {
                                 Main.item[i].active = false;
                             }
